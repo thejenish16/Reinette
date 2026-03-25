@@ -69,18 +69,18 @@ Reinette/
 
 All local images are in `src/img/` folder:
 
-| File | Path |
-|------|------|
-| a1.png | `src/img/a1.png` |
-| a2.png | `src/img/a2.png` |
-| a3.png | `src/img/a3.png` |
-| a4.png | `src/img/a4.png` |
-| a5.png | `src/img/a5.png` |
-| a6.png | `src/img/a6.png` |
-| a7.png | `src/img/a7.png` |
-| a8.png | `src/img/a8.png` |
-| a9.png | `src/img/a9.png` |
-| a10.png | `src/img/a10.png` |
+| File | Preview |
+|------|---------|
+| a1.png | ![a1](src/img/a1.png) |
+| a2.png | ![a2](src/img/a2.png) |
+| a3.png | ![a3](src/img/a3.png) |
+| a4.png | ![a4](src/img/a4.png) |
+| a5.png | ![a5](src/img/a5.png) |
+| a6.png | ![a6](src/img/a6.png) |
+| a7.png | ![a7](src/img/a7.png) |
+| a8.png | ![a8](src/img/a8.png) |
+| a9.png | ![a9](src/img/a9.png) |
+| a10.png | ![a10](src/img/a10.png) |
 
 ---
 
