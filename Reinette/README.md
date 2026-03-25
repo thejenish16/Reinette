@@ -1,19 +1,73 @@
-# React + Vite
+# Reinette — Real Estate Studio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, minimal real estate landing page built with **React 19 + Vite + Tailwind CSS v4**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Live Preview
 
-## React Compiler
+> Dark-themed, fully responsive single-page website for a premium real estate studio.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
+
+## Tech Stack
+
+| Tech | Version |
+|------|---------|
+| React | 19.x |
+| Vite | 7.x |
+| Tailwind CSS | 4.x |
+| ESLint | 9.x |
+
+---
+
+## Project Structure
+
+```
+Reinette/
+├── src/
+│   ├── components/
+│   │   ├── Navbar.jsx        # Fixed navbar with mobile menu
+│   │   ├── Hero.jsx          # Full-screen hero section
+│   │   ├── About.jsx         # About + image grid + stats
+│   │   ├── Achievement.jsx   # Achievements section
+│   │   ├── Service.jsx       # Services list
+│   │   ├── Project.jsx       # Project showcase grid
+│   │   ├── Team.jsx          # Team members
+│   │   ├── Review.jsx        # Client reviews
+│   │   ├── CTA.jsx           # Call to action
+│   │   └── Footer.jsx        # Footer with newsletter
+│   ├── img/                  # Local images (a1–a10)
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+├── index.html
+├── package.json
+└── vite.config.js
+```
+
+---
+
+## Sections
+
+| # | Section | Description |
+|---|---------|-------------|
+| 1 | Navbar | Fixed top nav, scroll effect, mobile hamburger menu |
+| 2 | Hero | Full-screen title with social links & scroll indicator |
+| 3 | About | Company info, stats (12+ yrs, 500+ sold, 98% satisfaction), image grid |
+| 4 | Achievement | Key milestones and numbers |
+| 5 | Service | Property Consultation, Market Analysis, Management, Financing |
+| 6 | Project | 4 featured properties (Villa, Resort, Suites, Villas) |
+| 7 | Team | 4 team members — Inspector, Manager, Planner, Consultant |
+| 8 | Review | Client testimonials |
+| 9 | CTA | Call to action banner |
+| 10 | Footer | Nav links, newsletter signup, social icons |
+
+---
 
 ## Project Images
 
-All images are located in `src/img/` folder:
+All local images are in `src/img/` folder:
 
 | File | Path |
 |------|------|
@@ -28,6 +82,44 @@ All images are located in `src/img/` folder:
 | a9.png | `src/img/a9.png` |
 | a10.png | `src/img/a10.png` |
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting Started
+
+```bash
+# Install dependencies
+npm install
+
+# Start dev server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+---
+
+## Features
+
+- Scroll-triggered reveal animations (IntersectionObserver)
+- Fully responsive — mobile, tablet, desktop
+- Fixed navbar with blur + scroll effect
+- Mobile hamburger menu
+- Image hover zoom effects
+- Grayscale → color team card hover
+- Newsletter input in footer
+- Dark theme throughout (`bg-black`)
+
+---
+
+## Contact
+
+📧 hello@reinette.com  
+🔗 [LinkedIn](https://www.linkedin.com/)
+
+---
+
+© 2025 Reinette. All rights reserved.
