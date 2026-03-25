@@ -1,7 +1,18 @@
-import useReveal from "../hooks/useReveal"
+import { useEffect, useRef } from "react"
 
 export default function Achievement() {
-  const ref = useReveal()
+  const ref = useRef(null)
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => entries.forEach((e) => {
+        if (e.isIntersecting)
+          e.target.querySelectorAll(".reveal, .reveal-left, .reveal-right").forEach((el) => el.classList.add("visible"))
+      }),
+      { threshold: 0.1 }
+    )
+    if (ref.current) observer.observe(ref.current)
+    return () => observer.disconnect()
+  }, [])
 
   return (
     <div ref={ref} className="bg-black text-white border-t border-b border-white/10 py-12">

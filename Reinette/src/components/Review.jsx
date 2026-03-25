@@ -1,4 +1,4 @@
-import useReveal from "../hooks/useReveal"
+import { useEffect, useRef } from "react"
 
 const BASE = "https://cdn.prod.website-files.com/6933d4dce1575ce638974488/"
 
@@ -20,7 +20,18 @@ const Stars = () => (
 )
 
 export default function Review() {
-  const ref = useReveal()
+  const ref = useRef(null)
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => entries.forEach((e) => {
+        if (e.isIntersecting)
+          e.target.querySelectorAll(".reveal, .reveal-left, .reveal-right").forEach((el) => el.classList.add("visible"))
+      }),
+      { threshold: 0.1 }
+    )
+    if (ref.current) observer.observe(ref.current)
+    return () => observer.disconnect()
+  }, [])
 
   return (
     <section ref={ref} id="section-review" className="bg-black text-white py-24">

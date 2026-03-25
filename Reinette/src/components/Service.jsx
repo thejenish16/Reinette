@@ -1,4 +1,4 @@
-import useReveal from "../hooks/useReveal"
+import { useEffect, useRef } from "react"
 
 const services = [
   { num: "01", title: "Property Consultation", desc: "Guiding you to the right property based on your needs." },
@@ -8,7 +8,18 @@ const services = [
 ]
 
 export default function Service() {
-  const ref = useReveal()
+  const ref = useRef(null)
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => entries.forEach((e) => {
+        if (e.isIntersecting)
+          e.target.querySelectorAll(".reveal, .reveal-left, .reveal-right").forEach((el) => el.classList.add("visible"))
+      }),
+      { threshold: 0.1 }
+    )
+    if (ref.current) observer.observe(ref.current)
+    return () => observer.disconnect()
+  }, [])
 
   return (
     <section ref={ref} id="section-service" className="bg-black text-white py-24">
